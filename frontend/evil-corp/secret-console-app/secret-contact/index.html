@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="./images/logo.png" />
+<title>Project X - Non-Evil Corp</title>
+<style>
+    body {
+    background-color: #101010;
+    font-family: 'Courier New', monospace;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .foooter{
+    display: none;
+  }
+  .footer{
+    color: #101010;
+  }
+  .secret-content {
+    text-align: center;
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  .secret-form input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #0f0;
+    background-color: #101010;
+    color: #0f0;
+    border-radius: 5px;
+  }
+  .secret-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0f0;
+    color: #101010;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .crumble {
+    animation: crumble 2s forwards;
+  }
+  @keyframes crumble {
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  #success-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #202020;
+    padding: 20px;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    text-align: center;
+  }
+  #success-message.show {
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <!-- ... (navigation bar content) ... -->
+</div>
+
+<div class="content">
+  <div class="secret-content">
+    <h2>Project X: The Ultimate Self-Destruction</h2>
+    <p>Just insert the secret phrase and initiate the end of Non-Evil Corp.</p>
+    <form class="secret-form">
+      <input type="text" name="hidden_name" id="hidden-name" placeholder="Enter the Secret Phrase" required>
+      <button type="submit">Initiate Self-Destruction</button>
+    </form>
+  </div>
+</div>
+
+<div id="success-message">
+  You destroyed Evil Corp and completed the challenge. Congratulations!
+</div>
+<div>
+  <div>
+    <div>
+      <div class="foooter">
+        Stars shimmer through the silent night.
+      </div>
+      <div class="foooter">
+        Whispers float in the brisk morning air.
+      </div>
+      <div class="foooter">
+        Colors dance on the autumn leaves.
+      </div>
+      <div class="foooter">
+        Waves crash along the distant shore.
+      </div>
+      <div class="foooter">
+        Dreams drift into the realm of reality.
+      </div>
+      <div class="foooter">
+        Time stands still in a fleeting moment.
+      </div>
+      <div class="foooter">
+        Music resonates in the chambers of the heart.
+      </div>
+      <div class="foooter">
+        Words weave webs of wonder.
+      </div>
+      <div class="foooter">
+        Laughter echoes in memories' halls.
+      </div>
+      <div class="foooter">
+        Thoughts spiral like autumn winds.
+      </div>
+      <div class="footer">
+        pass pass its a come
+      </div>
+      <div class="foooter">
+        Truth stands firm amidst the storms.
+      </div>
+      <div class="foooter">
+        Wisdom whispers in the stillness.
+      </div>
+      <div class="foooter">
+        Beauty blooms in the heart's garden.
+      </div>
+      <div class="foooter">
+        Magic weaves threads of wonder.
+      </div>
+      <div class="foooter">
+        Destiny charts courses yet untraveled.
+      </div>
+      <div class="foooter">
+        Passion pulses with life's rhythm.
+      </div>
+      <div class="foooter">
+        Dreams light the path of possibility.
+      </div>
+      <div class="foooter">
+        Creativity colors outside the lines.
+      </div>
+      <div class="foooter">
+        Hope hums melodies of tomorrow.
+      </div>
+      <div class="foooter">
+        Adventure unfolds in every step.
+      </div>
+      <div class="foooter">
+        Time ties moments into memories.
+      </div>
+      <div class="foooter">
+        Love lingers in every heartbeat.
+      </div>
+      <div class="foooter">
+        Curiosity carves pathways of discovery.
+      </div>
+      <div class="foooter">
+        Wisdom waits in the wings of time.
+      </div>
+      <div class="foooter">
+        Memories mirror moments long gone.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+<script>
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+document.onkeydown = (e) => {
+  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+  )
+    return false;
+};
+document.querySelector('.secret-form').addEventListener('submit', function(e) {
+  e.preventDefault(); 
+  const hiddenName = document.getElementById('hidden-name').value;
+  const hash = CryptoJS.MD5(hiddenName).toString();
+  if (hash === '9eee4adbb1f8ffd80d67cb97710d19fc') {
+    document.querySelector('.content').classList.add('crumble');
+    setTimeout(function() {
+      document.getElementById('success-message').classList.add('show');
+    }, 2000);  
+  }
+});
+</script>
+
+</body>
+</html>

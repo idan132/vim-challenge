@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="./images/logo.png" />
+<title>Contact - Non-Evil Corp</title>
+<style>
+  body {
+    background-color: #101010;
+    font-family: 'Courier New', monospace;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    background-color: #202020;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .navbar a, .logo, .link, h2, h3 {
+    color: #0f0;
+    transition: color 0.3s;
+    text-decoration: none;
+  }
+  .navbar a:hover, .link:hover {
+    color: #00ff00;
+  }
+  .navbar a{
+      padding-right: 20px;
+  }
+  .content {
+    margin-top: 100px;
+    padding: 20px;
+  }
+  .contact {
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #0f0;
+    background-color: #101010;
+    color: #0f0;
+    border-radius: 5px;
+  }
+  .contact-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0f0;
+    color: #101010;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .footer {
+    background-color: #202020;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="logo">0nlyw1n</div>
+  <nav>
+    <a href="https://vim-challenge.com/evil-corp/secret-console-app/home">Home</a>
+    <a href="https://vim-challenge.com/evil-corp/secret-console-app/contact">Contact</a>
+  </nav>
+</div>
+
+<div class="content">
+  <div class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number" required>
+      <textarea name="message" placeholder="If you wish to contact us about project X, you should go to our secret-contact page" rows="5" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div class="footer">
+  <a class="link" href="#">Privacy Policy</a> | <a class="link" href="#">Terms of Service</a> | <a class="link" href="#">Contact</a>
+</div>
+
+</body>
+</html>

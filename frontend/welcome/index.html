@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @keyframes type {
+            from {
+                width: 0;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        @keyframes bgAnimation {
+            0% {
+                background-position: 100% 0;
+            }
+            100% {
+                background-position: 0 100%;
+            }
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #1e1e1e, #121212, #1e1e1e, #121212);
+            background-size: 300% 300%;
+            animation: bgAnimation 15s infinite, type 2s steps(30, end), blink .75s step-end infinite;
+            color: #00ff00;
+        }
+
+        .header {
+            padding: 20px;
+            text-align: center;
+            background-color: #121212;
+        }
+
+        .logo {
+            width: 116px;
+            height: 33px;
+        }
+
+        .main {
+            padding: 20px;
+            text-align: center;
+            border-right: .15em solid #00ff00;
+        }
+
+        .main h1 {
+            animation: type 1.5s steps(60, end), blink .75s step-end infinite;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid #00ff00;
+            margin: 0;
+        }
+
+        .main p {
+            font-size: 18px;
+            animation: type 2s steps(60, end), blink .75s step-end infinite;
+            overflow: hidden;
+            border-right: .15em solid #00ff00;
+        }
+
+        .link {
+            display: inline-block;
+            color: #00ff00;
+            background-color: #1e1e1e;
+            border: 2px solid #00ff00;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .link:hover {
+            background-color: #121212;
+            border-color: #ffffff;
+        }
+
+        .link:active {
+            background-color: #0e0e0e;
+            border-color: #ffffff;
+            transform: scale(0.95);
+        }
+        .responsive-image {
+            max-width: 60%;  /* Ensures the image doesn't stretch beyond its original size or the parent container size */
+            height: auto;  /* Retains the image's aspect ratio */
+            display: block;  /* To center the image, optional */
+            margin: 0 auto;  /* Centers the image horizontally, optional */
+        }
+    </style>
+    <title>Vim Challenge</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://getvim.com/wp-content/themes/getvim-redesign/img/Favicons/favicon-16x16.png">
+</head>
+<body>
+<div class="header">
+    <img src="https://getvim.com/wp-content/uploads/2022/05/Transparent-logo.svg" alt="Vim Logo" class="logo">
+</div>
+<div class="main">
+    <h1>Security Alert!</h1>
+    <p>An evil organization has stolen 100TB of Protected Health Information (PHI). 
+        <br>
+        Your goal is to hack into the organization and destroy it from within. We must stop them and safeguard the valuable information.
+    </p>
+    <p>Our intelligence team discovered a lead from the org's Instagram.
+        <br>
+        However, they believe this lead is only partial, the only way to obtain the last piece is to steal it from the gate keeper.
+        <br>
+        Good luck, agent
+        <img src="welcome.png" alt="Welcome Image" class="responsive-image">
+        <a class="link" href="https://vim-challenge.com/gate-keeper">Start</a>
+    </p>
+</div>
+</body>
+</html>

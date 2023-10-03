@@ -1,0 +1,45 @@
+/* Add this to your .css file */
+
+@keyframes dotPulse {
+    0%, 80%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  .loadingDot {
+    background-color: #11ff00; /* Change color here */
+    width: 15px;  /* Change size here */
+    height: 15px;  /* Change size here */
+    margin: 3px;
+    border-radius: 50%;
+    
+    /* We will use this animation */
+    animation: dotPulse 1.4s infinite;
+    animation-fill-mode: both;
+  }
+  
+  .dot1 {
+    animation-delay: 0.2s;
+  }
+  
+  .dot2 {
+    animation-delay: 0.4s;
+  }
+  
+  .dot3 {
+    animation-delay: 0.6s;
+  }
+
+  .semi-bold {
+    font-weight: 1000;  /* adjust this value to your preference */
+  }
+  
+  .bold {
+    font-weight: 1500;  /* adjust this value to your preference */
+  }
+
+  
+  
